@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="username">UserName:</label>
+      <input
+        type="text"
+        name=""
+        id=""
+        minlength="3"
+        maxlength="30"
+        placeholder="Enter Your Name"
+      />
+      <button>Click Here</button>
+    </form>
+    <script>
+      const tamil = parseInt(prompt("Enter your Tamil Mark"));
+      const english = parseInt(prompt("Enter your English Mark"));
+      const maths = parseInt(prompt("Enter your Maths Mark"));
+      const science = parseInt(prompt("Enter your Science Mark"));
+      const socialscience = parseInt(prompt("Enter your SocialScience Mark"));
+      let total = tamil + english + maths + science + socialscience;
+      let avg = total / 5;
+      console.log("Tamil Mark is", tamil);
+      console.log("English Mark is", english);
+      console.log("Maths Mark is", maths);
+      console.log("Science Mark is", science);
+      console.log("Socialscience Mark is", socialscience);
+      if (
+        tamil >= 40 &&
+        tamil <= 100 &&
+        english >= 40 &&
+        english <= 100 &&
+        maths >= 40 &&
+        maths <= 100 &&
+        science >= 40 &&
+        science <= 100 &&
+        socialscience >= 40 &&
+        socialscience <= 100
+      ) {
+        if (
+          (tamil >= 40 && tamil <= 59) ||
+          (english >= 40 && english <= 59) ||
+          (maths >= 40 && maths <= 59) ||
+          (science >= 40 && science <= 59) ||
+          (socialscience >= 40 && socialscience <= 59)
+        ) {
+          console.log("Grade D");
+        } else {
+          if (
+            (tamil >= 60 && tamil <= 74) ||
+            (english >= 60 && english <= 74) ||
+            (maths >= 60 && maths <= 74) ||
+            (science >= 60 && science <= 74) ||
+            (socialscience >= 60 && socialscience <= 74)
+          ) {
+            console.log("Grade C");
+          } else {
+            if (
+              (tamil >= 75 && tamil <= 89) ||
+              (english >= 75 && english <= 89) ||
+              (maths >= 75 && maths <= 89) ||
+              (science >= 75 && science <= 89) ||
+              (socialscience >= 75 && socialscience <= 89)
+            ) {
+              console.log("Grade B");
+            } else {
+              console.log("Grade A");
+            }
+          }
+        }
+        console.log("Total is", total);
+        console.log("Average is", avg);
+      } else {
+        if (
+          tamil > 100 ||
+          english > 100 ||
+          maths > 100 ||
+          science > 100 ||
+          socialscience > 100
+        ) {
+          console.log("Invalid input");
+        } else {
+          console.log("Fail");
+          console.log("Total is", total);
+          console.log("Average is", avg);
+        }
+      }
+    </script>
+  </body>
+</html>
